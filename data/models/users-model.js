@@ -1,4 +1,4 @@
-import db from './dbConfig';
+import db from '../dbConfig';
 
 export function addUser(user) {
   return db('users')
