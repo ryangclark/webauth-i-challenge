@@ -3,7 +3,7 @@ import db from '../dbConfig';
 export function addUser(user) {
   return db('users')
     .insert(user)
-    .then(newUserId => getUserById(newUserId));
+    .then(newUserId => getUserById(newUserId[0]));
 }
 
 export function getAllUsers() {

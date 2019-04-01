@@ -4,8 +4,8 @@ import express from 'express';
 import {
   addUser,
   getAllUsers,
-  getUserById,
-  getUserByUsername
+  // getUserById,
+  getUserByFilter
 } from '../data/models/users-model';
 
 const router = express.Router();
@@ -48,7 +48,7 @@ router.post('/register', (req, res) => {
 router.post('/login', bouncer, (req, res) => {
   return res
     .status(200)
-    .json({ message: `Username ${req.headers.username} has logged in!` });
+    .json({ message: `User '${req.headers.username}' has logged in!` });
 });
 
 /**
