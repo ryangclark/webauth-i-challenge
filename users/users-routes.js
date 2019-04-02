@@ -6,7 +6,7 @@ import {
   getAllUsers,
   // getUserById,
   getUserByFilter
-} from '../data/models/users-model';
+} from './users-model';
 
 const router = express.Router();
 
